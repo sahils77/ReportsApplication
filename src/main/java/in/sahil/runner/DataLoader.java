@@ -20,6 +20,8 @@ public class DataLoader implements ApplicationRunner
 	
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
+		
+		repo.deleteAll();
 	
 		// Cash Plan Data
 		CitizenPlan c1=new CitizenPlan();
@@ -141,7 +143,7 @@ public class DataLoader implements ApplicationRunner
             List<CitizenPlan> list=Arrays.asList(c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12);
             repo.saveAll(list);
 
-
+           
 		
 		
 	}
