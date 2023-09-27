@@ -18,14 +18,14 @@ public class ReportServiceImpl implements ReportsService {
 	@Override
 	public List<String> getPlanNames() {
 		
-		//List<String> planData=getPlanNames();
-		return null;
+		return repo.getPlanNames();
+		
 	}
 
 	@Override
 	public List<String> getPlanStatus() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return repo.getPlanStatus();
 	}
 
 	@Override

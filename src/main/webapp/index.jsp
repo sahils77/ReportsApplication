@@ -22,15 +22,17 @@
 <table>
 
 <tr>
-<td>Plan Name:<td>
+<td>Plan Name:</td>
 <td>
 <form:select path="planName">
 <form:option value="">-Select-</form:option>
+<form:options items="${names}"/>
 </form:select></td>
 <td>Plan Status:</td>
 <td>
 <form:select path="planStatus">
 <form:option value="">-Select-</form:option>
+<form:options items="${status}"/>
 </form:select></td>
 
 <td>Gender:</td>
@@ -46,10 +48,15 @@
 
 <tr>
 <td>Start Date:</td>
-<td><form:input path="startDate"/></td>
+<td><form:input path="startDate" type="date" id="datepicker" 
+             class="input-group date" 
+             data-date-format="mm-dd-yyyy"/></td>
+
 
 <td>End Date:</td>
-<td><form:input path="endDate"/></td>
+<td><form:input path="endDate" type="date" id="datepicker" 
+             class="input-group date" 
+             data-date-format="mm-dd-yyyy"/></td>
 </tr>
 
 <tr>
@@ -66,6 +73,11 @@
 </table>
 
 </form:form>
+<hr/>
+
+<hr/>
+
+Export : <a href="">Excel</a> <a href="">Pdf</a>
 
 
 </div>

@@ -20,6 +20,8 @@ public class ReportController
     	SearchRequest search=new SearchRequest();
     	
     	model.addAttribute("search", search);
+    	model.addAttribute("names", service.getPlanNames());
+    	model.addAttribute("status", service.getPlanStatus());
     	return "index";
     }
 	
